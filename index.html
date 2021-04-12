@@ -3,11 +3,94 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>My IT 202 Projects</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <style>
+        .card{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            background-color: #181C20;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 40%;
+            padding: 20px;
+            margin: 30px;
+        }
+        .card:hover{
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+        
+        .container{
+            padding: 5px 16px;
+        }
+        body{
+            background-color: #000437;
+            color: white;
+        }
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 40px;
+            color: white;
+            text-align: center;
+        }
+        h2{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            color: white;
+            text-align: left;
+        }
+
+    </style>
   </head>
   <body>
-    Hello World!
-    <script src="script.js"></script>
+      <h1>
+          Roberto Torres
+      </h1>
+      <h2>
+          This Spring Semester, I Enrolled In IT 202 at UIC. This Class Has Taught Me Many Things About App and Web Development. I Have Higlighted Some Of My Best Projects As Well As My Favorite Ones
+      </h2>
+        <div class="card template">
+            <img class="card-img-top">
+            <div class = "container">
+            <h4 class="card-title">Card title</h5>
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-primary"></a>
+            </div>
+        </div>
+<!-- 
+        <div class = "card">
+            <div class = "container">
+            <h4 class = "card-title"><b>Hello </b></h4>
+            <p class = "card-text">Is This Acutally Working ??</p>
+            </div>
+        </div> -->
+    <script>
+        let projects = [
+            {
+                "title": "map_basics.html",
+                "description": "Usage of Google Maps API",
+                "languages": "HTML JavaScript CSS",
+                "link": "https://rob-torres45.github.io/IT202-Spring2021-activities/map_basic.html"
+            },
+            {
+                "title": "mcw_basics.html",
+                "description": "Usage of Material Components",
+                "languages": "HTML CSS JavaScript",
+                "link": "https://rob-torres45.github.io/IT202-Spring2021-activities/mcw_basics.html"
+            }
+        ];
+        // projects.forEach((project) => {
+        //     let p = document.createElement("p");
+        //     p.innerHTML = "Project Title: " + project.title + "\nDescription: " + project.description + "\nLanguages: " + project.languages + "\nLink: " + project.link;
+        //     document.body.append(p);
+        // });
+        // let clone = document.querySelector(".template").clone();
+        // clone.querySelector
+        projects.forEach((project) => {
+            let r = document.querySelector(".card-title").innerText = "Project Title: " + project.title + document.querySelector(".card-text").title + "\nDescription: " + project.description + "\nLanguages: " + project.languages + "\n" + document.querySelector(".btn-primary").innerText + "\nLink: " + project.link;
+            // + document.querySelector(".btn btn-primary").innerText = "Link" + project.link;
+        });
+    </script>
   </body>
 </html>
